@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy,Component } from '@angular/core';
 import { NbSidebarService } from '@nebular/theme';
-
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,12 @@ import { NbSidebarService } from '@nebular/theme';
 })
 export class AppComponent {
   title = 'apply-nebular';
+
+  public karanganM;
+  //form controls
+  public karanganFC = new FormControl();
+  public namaFC = new FormControl();
+  public umurFC = new FormControl();
 
   constructor( private sidebarService: NbSidebarService){
 

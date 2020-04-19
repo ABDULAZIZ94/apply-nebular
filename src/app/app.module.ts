@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NbThemeModule, NbLayoutModule, NbInputModule } from '@nebular/theme';
 import { NbSidebarModule, NbCardModule } from '@nebular/theme';
@@ -16,6 +17,8 @@ import { NbIconModule } from '@nebular/theme';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NbLayoutModule,

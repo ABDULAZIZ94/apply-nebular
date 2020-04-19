@@ -7,11 +7,34 @@
   <nb-layout-column class="colored-column-info">
       <nb-card>
         <nb-card-body class="example-items-col">
-          <label for="nama">Nama: </label>
-          <input type="text" id="nama" fieldSize="small" nbInput status="primary" placeholder="eg: ali">
-          <br>
-          <label for="age">Age: </label>
-          <input type="number" id="age" fieldSize="small" nbInput status="primary" placeholder="eg: 25">
+          <table>
+            <!--form put in table to ensure it properly alligned-->>
+            <tr>
+              <td>
+                <label for="nama">Nama: </label>
+              </td>
+              <td>
+                <input type="text" id="nama" fieldSize="small" nbInput status="primary" placeholder="eg: ali">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="age">Age: </label>
+              </td>
+              <td>
+                <input type="number" id="age" fieldSize="small" nbInput status="primary" placeholder="eg: 25">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="karangan">Karangan: </label>
+              </td>
+              <td>
+                <textarea id="karangan" nbInput placeholder="250 patah perkataan" fieldSize="small" status="primary"
+                  [(ngModel)]="this.karanganM" [formControl]="this.karanganFC"></textarea>
+              </td>
+            </tr>
+          </table>
         </nb-card-body>
       </nb-card>
   </nb-layout-column>
