@@ -16,6 +16,7 @@ export class AppComponent {
   public karanganFC = new FormControl();
   public namaFC = new FormControl();
   public umurFC = new FormControl();
+  menus = ["Karkun","Muhalla","Azam"];
 
   constructor( private sidebarService: NbSidebarService){
 

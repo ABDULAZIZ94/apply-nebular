@@ -1,41 +1,120 @@
 <nb-layout>
-  <nb-layout-header fixed>
+  <nb-layout-header fixed >
     <nb-icon icon="menu-outline" status="warning" (click)="toggle()"></nb-icon>
+    <tr>
+      <a href="#1" >Div 1</a>
+      <a href="#2" >Div 2</a>
+      <a href="google.com" >Div 3</a>
+    </tr>
   </nb-layout-header>
-  <nb-sidebar ></nb-sidebar>
-
+  <nb-sidebar >
+    <nb-list>
+      <nb-list-item *ngFor="let menu of menus">
+        {{ menu }}
+      </nb-list-item>
+    </nb-list>
+  </nb-sidebar>
   <nb-layout-column class="colored-column-info">
-      <nb-card>
-        <nb-card-body class="example-items-col">
-          <!--form put in table to ensure it properly-->
-          <table>
-            <tr>
-              <td>
-                <label for="nama">Nama: </label>
-              </td>
-              <td>
-                <input type="text" id="nama" fieldSize="small" nbInput status="primary" placeholder="eg: ali">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="age">Age: </label>
-              </td>
-              <td>
-                <input type="number" id="age" fieldSize="small" nbInput status="primary" placeholder="eg: 25">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="karangan">Karangan: </label>
-              </td>
-              <td>
-                <textarea id="karangan" nbInput placeholder="250 patah perkataan" fieldSize="small" status="primary"
-                  [(ngModel)]="this.karanganM" [formControl]="this.karanganFC"></textarea>
-              </td>
-            </tr>
-          </table>
-        </nb-card-body>
-      </nb-card>
+    <nb-card>
+      <nb-card-body>
+        <nb-stepper orientation="horizontal">
+          <nb-step [label]="labelOne">
+            <ng-template #labelOne>Register</ng-template>
+            <h4>Step content #1</h4>
+            <p class="lorem">
+              Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing break it down.
+              Nullizzle sapien velizzle, my shizz pimpin', shizzle my nizzle crocodizzle shut the shizzle up,
+              gravida vizzle, dang.
+            </p>
+            <button nbButton size="tiny" disabled nbStepperNext>prev</button>
+            <button nbButton size="tiny" nbStepperNext>next</button>
+          </nb-step>
+          <nb-step [label]="labelTwo">
+            <ng-template #labelTwo>Second step</ng-template>
+            <h4>Step content #2</h4>
+            <p class="lorem">
+              Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing break it down.
+              Nullizzle sapien velizzle, my shizz pimpin', shizzle my nizzle crocodizzle shut the shizzle up,
+              gravida vizzle, dang.
+            </p>
+            <button nbButton size="tiny" nbStepperPrevious>prev</button>
+            <button nbButton size="tiny" nbStepperNext>next</button>
+          </nb-step>
+          <nb-step label="Third step">
+            <h4>Step content #3</h4>
+            <p class="lorem">
+              Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing break it down.
+              Nullizzle sapien velizzle, my shizz pimpin', shizzle my nizzle crocodizzle shut the shizzle up,
+              gravida vizzle, dang.
+            </p>
+            <button nbButton size="tiny" nbStepperPrevious>prev</button>
+            <button nbButton size="tiny" nbStepperNext>next</button>
+          </nb-step>
+          <nb-step [label]="labelFour">
+            <ng-template #labelFour>Fourth step</ng-template>
+            <h4>Step content #4</h4>
+            <p class="lorem">
+              Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing break it down.
+              Nullizzle sapien velizzle, my shizz pimpin', shizzle my nizzle crocodizzle shut the shizzle up,
+              gravida vizzle, dang.
+            </p>
+            <button nbButton size="tiny" nbStepperPrevious>prev</button>
+            <button nbButton size="tiny" disabled nbStepperNext>next</button>
+          </nb-step>
+        </nb-stepper>
+      </nb-card-body>
+    </nb-card>
+    <nb-card>
+      <nb-card-header>Personal Information</nb-card-header>
+      <nb-card-body class="example-items-col">
+        <!--form put in table to ensure it properly-->
+        <table>
+          <tr>
+            <td>
+              <label for="nama">Nama: </label>
+            </td>
+            <td>
+              <input type="text" id="nama" fieldSize="small" nbInput status="primary" placeholder="eg: ali">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="age">Age: </label>
+            </td>
+            <td>
+              <input type="number" id="age" fieldSize="small" nbInput status="primary" placeholder="eg: 25">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="karangan">Karangan: </label>
+            </td>
+            <td>
+              <textarea id="karangan" nbInput placeholder="250 patah perkataan" fieldSize="small" status="primary"
+                [(ngModel)]="this.karanganM" [formControl]="this.karanganFC"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+
+            </td>
+            <td>
+              <button nbButton size="small" status="info">Publish</button>
+            </td>
+          </tr>
+        </table>
+      </nb-card-body>
+      <nb-card-footer #3 class="text-center">
+        <button nbButton size="small" status="warning">cancel</button><br>
+      </nb-card-footer>
+    </nb-card>
+    <nb-card>
+      <nb-actions >
+        <nb-action >Section 1</nb-action>
+        <nb-action >Section 2</nb-action>
+        <nb-action >Section 3</nb-action>
+
+      </nb-actions>
+    </nb-card>
   </nb-layout-column>
 </nb-layout>

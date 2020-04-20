@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { NbThemeModule, NbLayoutModule, NbInputModule } from '@nebular/theme';
-import { NbSidebarModule, NbCardModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbInputModule, NbButtonModule, 
+          NbSidebarModule, NbCardModule, NbStepperModule, NbListModule, 
+          NbActionsModule, NbMenuModule } from '@nebular/theme';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbEvaIconsModule } from '@nebular/eva-icons';//add nebular theme
 import { NbIconModule } from '@nebular/theme';
@@ -21,11 +22,16 @@ import { NbIconModule } from '@nebular/theme';
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NbListModule,
     NbLayoutModule,
     NbEvaIconsModule,
+    NbButtonModule,
+    NbActionsModule,
     NbIconModule,
     NbCardModule,
     NbInputModule,
+    NbStepperModule,
+    NbMenuModule.forRoot(),
     NbSidebarModule.forRoot(),
     NbThemeModule.forRoot({ name: 'default' }),
   ],
